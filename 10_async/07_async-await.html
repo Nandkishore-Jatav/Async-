@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="nayan"></p>
+    <script>
+        async function nayanJatav(){
+            let myName = new Promise(function(resolve, reject){
+                let fname = new XMLHttpRequest();
+
+                fname.open("GET", "file:///F:/antivirus%20project/new.html");
+                fname.onload = function() {
+                    if(fname.status == 200) {
+                        resolve(fname.response);
+                    }else{
+                        reject("file is not found");
+                    }            
+                };
+                fname.send();
+            });
+            document.getElementById("nayan").innerHTML = await myName;            
+        };
+
+        nayanJatav();
+    </script>
+</body>
+</html>

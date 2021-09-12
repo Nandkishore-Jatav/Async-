@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Async Document</title>
+</head>
+<body>
+    <script>
+        async function nayan(){
+            document.write("Nandkishore Jaatav" + "<br>");
+            return "Nandkishore Jaatav";
+        }
+        async function nand(){
+            document.write("Lorem ipsum dolor sit amet consectetur adipisicing elit." + "<br>");
+        }
+        nand();
+        nayan();
+        //********************************
+     
+        async function nandu(){
+            return "hellow how are you?";
+        } 
+        nandu().then((result) => document.write(result));
+
+        
+        document.write('Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eveniet commodi velit nostrum suscipit! Impedit corrupti aliquam fugit itaque esse natus nesciunt possimus.' + "<br>");
+        
+        //*********************************
+        let nna = async() => {
+            return "hellow how are you?";
+        } 
+        nna().then((result) => document.write(result));
+        
+        document.write('Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eveniet commodi velit nostrum suscipit! Impedit corrupti aliquam fugit itaque esse natus nesciunt possimus.' + "<br>");
+        
+        //**********************************
+        let mun = async() => "hellow aklaljdlhal;fhdklkfnd;lkkl;sdjf";
+        
+        mun().then((returns) => document.write(returns));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos provident unde quis tenetur aperiam! Perspiciatis amet commodi pariatur neque suscipit?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum doloribus provident corporis error ex fuga quibusdam vero. Officia, enim pariatur!</p>
+        <p id="nand"></p>
+    
+
+    <script>
+        // let myName = async() => {
+            async function myName() {
+            let myPromise = new Promise(function(myResolve, myReject) {
+                setTimeout(
+                    function(){
+                         myResolve("<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, iste!</h1>");
+                        }, 2*2000);
+                    });    
+            
+                document.getElementById("nand").innerHTML = await myPromise;
+            
+        }
+        myName();
+        
+    </script>
+</body>
+</html>

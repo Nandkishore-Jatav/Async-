@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Document</title>
+</head>
+<body>
+    <h3>Hello Javascript Async</h3>
+    <p id="demo"></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, sed?</p>
+    <script>
+    // lat myName = (nayan) => {
+    function myName(nayan) {
+            document.getElementById("demo").innerHTML = nayan;
+        }
+        let test = async() => {return "hello Mr. Nandkishore <h2> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, sed?</h2> ";}
+        test().then(
+            function(value) {myName(value);},
+            // function(value) {myName(error);}
+        );
+    </script>
+</body>
+</html>
